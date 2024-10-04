@@ -19,3 +19,10 @@ print(f"There are/is {lowercase_list.count(char3)} times the letter {char3}")
 
 #It calculated the number of words in the text
 print(f"The number of words in the text is:: {len(text.split())}")
+
+#It calculated the first and last letters in the text
+print(f"The first letter of the text is: {text[0]}")
+
+number_char=len(text)
+print(f"The last letter of the text is: {text[number_char-1]}")
+
