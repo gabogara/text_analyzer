@@ -34,3 +34,8 @@ splited_arr.reverse()
 final_str=' '.join(splited_arr)
 print(f"The word order is inverted. The result is: {final_str}")
 
+#the Python word is searched for in the text
+splited_arr2= text.split()
+logic = 'python' in splited_arr2
+means={True:"the Python word was found in the text",False:"the Python word was not found in the text"}
+print(means[logic])
