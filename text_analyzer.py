@@ -26,3 +26,11 @@ print(f"The first letter of the text is: {text[0]}")
 number_char=len(text)
 print(f"The last letter of the text is: {text[number_char-1]}")
 
+
+#The word order is inverted.
+splited_arr= text.split()
+splited_arr.reverse()
+
+final_str=' '.join(splited_arr)
+print(f"The word order is inverted. The result is: {final_str}")
+
