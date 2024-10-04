@@ -16,3 +16,6 @@ char3= input("Please enter a letter to search for in the text: ")
 print(f"There are/is {lowercase_list.count(char1)} times the letter {char1}")
 print(f"There are/is {lowercase_list.count(char2)} times the letter {char2}")
 print(f"There are/is {lowercase_list.count(char3)} times the letter {char3}")
+
+#It calculated the number of words in the text
+print(f"The number of words in the text is:: {len(text.split())}")
