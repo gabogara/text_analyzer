@@ -9,13 +9,18 @@ lowercase_list = [x.lower() for x in text_arr]
 
 #I receive what is necessary for requirement 1
 char1= input("Please enter a letter to search for in the text: ")
+charx1=char1.lower()
+print(f"El caracter 1 es: {charx1}")
+
 char2= input("Please enter a letter to search for in the text: ")
+charx2=char2.lower()
 char3= input("Please enter a letter to search for in the text: ")
+charx3=char3.lower()
 
 #I show the results of the number of times the supplied letters appear in the text.
-print(f"There are/is {lowercase_list.count(char1)} times the letter {char1}")
-print(f"There are/is {lowercase_list.count(char2)} times the letter {char2}")
-print(f"There are/is {lowercase_list.count(char3)} times the letter {char3}")
+print(f"There are/is {lowercase_list.count(charx1)} times the letter {charx1}")
+print(f"There are/is {lowercase_list.count(charx2)} times the letter {charx2}")
+print(f"There are/is {lowercase_list.count(charx3)} times the letter {charx3}")
 
 #It calculated the number of words in the text
 print(f"The number of words in the text is:: {len(text.split())}")
