@@ -1,46 +1,42 @@
 #I receive the text in a string variable named text
-text= input("Please enter text: ")
+text = input("Please enter text: ")
 
-#convert the string to an auxiliary list
-text_arr= list(text)
+# Convert the string to an auxiliary list
+text_arr = list(text)
 
-#I pass the entire text string in lowercase letters for comparison
-lowercase_list = [x.lower() for x in text_arr]
+# Create a lowercase version of the text list for case-insensitive comparisons
+lowercase_list = [char.lower() for char in text_arr]
 
-#I receive what is necessary for requirement 1
-char1= input("Please enter a letter to search for in the text: ")
-charx1=char1.lower()
-print(f"El caracter 1 es: {charx1}")
+# Get user input for characters to search
+char1 = input("Please enter a letter to search for in the text: ")
+charx1 = char1.lower()
+char2 = input("Please enter a letter to search for in the text: ")
+charx2 = char2.lower()
+char3 = input("Please enter a letter to search for in the text: ")
+charx3 = char3.lower()
 
-char2= input("Please enter a letter to search for in the text: ")
-charx2=char2.lower()
-char3= input("Please enter a letter to search for in the text: ")
-charx3=char3.lower()
-
-#I show the results of the number of times the supplied letters appear in the text.
+# Count occurrences of each character and display results
 print(f"There are/is {lowercase_list.count(charx1)} times the letter {charx1}")
 print(f"There are/is {lowercase_list.count(charx2)} times the letter {charx2}")
 print(f"There are/is {lowercase_list.count(charx3)} times the letter {charx3}")
 
-#It calculated the number of words in the text
-print(f"The number of words in the text is:: {len(text.split())}")
+# Calculate the number of words in the text
+num_words = len(text.split())
+print(f"The number of words in the text is: {num_words}")
 
-#It calculated the first and last letters in the text
-print(f"The first letter of the text is: {text[0]}")
+# Get the first and last letters of the text
+first_letter = text[0]
+last_letter = text[-1]
+print(f"The first letter of the text is: {first_letter}")
+print(f"The last letter of the text is: {last_letter}")
 
-number_char=len(text)
-print(f"The last letter of the text is: {text[number_char-1]}")
+# Reverse the word order and display the result
+reversed_text = ' '.join(reversed(text.split()))
+print(f"The word order is inverted. The result is: {reversed_text}")
 
-
-#The word order is inverted.
-splited_arr= text.split()
-splited_arr.reverse()
-
-final_str=' '.join(splited_arr)
-print(f"The word order is inverted. The result is: {final_str}")
-
-#the Python word is searched for in the text
-splited_arr2= text.split()
-logic = 'python' in splited_arr2
-means={True:"the Python word was found in the text",False:"the Python word was not found in the text"}
-print(means[logic])
+# Search for a word in the text and display the result
+search_word = input("Please enter a word to search for in the text: ")
+search_word = search_word.lower()
+found = search_word in text.lower().split()
+result = "the word was found in the text" if found else "the word was not found in the text"
+print(f"{result}")
